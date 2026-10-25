@@ -6,7 +6,7 @@ images through the Walsync image service (`https://img.walsync.com`, GPT Image 2
 You need a personal **key** from the person who gave you this link. The key is **not** in this repository: the agent asks you
 for it when it installs the skill, and stores it only on your machine.
 
-- 50 images per 48 hours per key
+- 50 images per day per key (rolling 24 hours, the key does not expire)
 - text to image and image editing (up to 16 reference images)
 - nothing to install except the skill itself (Python 3.8+, standard library only)
 

@@ -37,10 +37,10 @@ never include it in a prompt. Only `setkey` (or the `WALSYNC_IMAGE_KEY` environm
 
 ## 2. Quota
 
-Each key may create **50 images per rolling 48 hours** (every image in `-n` counts; a request that fails is not charged).
+Each key may create **50 images per day (a rolling 24 hours; the key itself never expires)** (every image in `-n` counts; a request that fails is not charged).
 - Run `usage` before a batch and tell the user how many images are left when it matters.
 - Ask before generating more than 4 images in one go. Do not loop to "try again" for variations without being asked.
-- On `QUOTA_USED_UP` (exit 4) stop, tell the user when the next slot frees up (the message says so), and offer to continue
+- On `QUOTA_USED_UP` (exit 4) stop, tell the user when the next slot frees up (the message says so; the daily allowance comes back gradually as older images pass 24 hours), and offer to continue
   then. Do not look for ways around the limit.
 
 ## 3. Making images
